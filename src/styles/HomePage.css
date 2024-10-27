@@ -295,7 +295,7 @@
     height: 400px;
     padding: 20px;
     border-radius: 10px; 
-    animation: popIn 0.5s ease forwards; /* Apply pop-in animation */
+    animation: popIn 0.5s ease forwards; 
   }
   
   
