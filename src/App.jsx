@@ -6,6 +6,7 @@ import SignUpPage from './pages/SignUpPage';
 import AboutUs from './pages/AboutUs';
 import Payment from './pages/Payment';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,13 +21,14 @@ function App() {
           <Route path="/donate" element={<Payment />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }
 
 export default function Wrapper() {
   return (
-    <Router>
+    <Router>` `
       <App />
     </Router>
   );

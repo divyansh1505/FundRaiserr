@@ -7,7 +7,7 @@ import '../styles/HomePage.css';
 const HomePage = () => {
   return (
     <div>
-      <Header />
+      
       <main>
         <section className="hero-section">
           <div className="text-slide">
@@ -21,7 +21,6 @@ const HomePage = () => {
         </section>
         <CampaignList />
       </main>
-      <Footer />
     </div>
   );
 };
