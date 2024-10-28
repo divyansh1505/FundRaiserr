@@ -148,7 +148,8 @@ body {
 
 .submit1:hover {
     background-color: hsl(279, 90%, 60%);
-    animation: popUp 0.3s ease-in-out forwards;
+    transform: scale(1,1.2);
+    transition: 0.2sec;
 }
 
 .popup {
@@ -192,7 +193,7 @@ body {
 
 .popup button:hover {
     background-color: hsl(279, 90%, 60%);
-    animation: popUp 0.3s ease-in-out forwards;
+    
 }
 
 .donate {
