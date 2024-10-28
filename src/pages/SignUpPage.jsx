@@ -1,31 +1,44 @@
-import '../styles/HomePage.css';
-import React from 'react';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from "react";
+import { auth, db } from "../components/firebase";
+import { setDoc, doc } from "firebase/firestore";
+import { toast } from "react-toastify";
+import '../styles/Auth.css'; 
 
-const SignUp = () => {
+function SignUpPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      await setDoc(doc(db, "Users", user.uid), {
+        email: user.email,
+        firstName: fname,
+        lastName: lname,
+      });
+      toast.success("User registered successfully!", { position: "top-center" });
+      window.location.href = "/profile";
+    } catch (error) {
+      toast.error(error.message, { position: "bottom-center" });
+    }
+  };
+
   return (
-    <div className="sign-up-body">
-    <div class="container">
-    <div className="sign-up-page">
-      <h1>Sign Up</h1>
-      <form>
-        <label htmlFor="Name">Name:</label>
-        <input type="Name" id="Name" required />
-        
-        <label htmlFor="DOB">DOB:</label>
-        <input type="DOB" id="DOB" required />
-
-        <label htmlFor="Email">Email:</label>
-        <input type="Email" id="Email" required />
-
-        <label htmlFor="Password">Password:</label>
-        <input type="Password" id="Password" required />
-        
-        <button type="submit">Sign Up</button>
-      </form>
-    </div>
-    </div>
-    </div>
+    <form onSubmit={handleRegister} className="auth-form">
+      <h3>Sign Up</h3>
+      <input type="text" placeholder="First name" onChange={(e) => setFname(e.target.value)} />
+      <input type="text" placeholder="Last name" onChange={(e) => setLname(e.target.value)} />
+      <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="/signin">Sign In</a></p>
+    </form>
   );
-};
+}
 
-export default SignUp;
+export default SignUpPage;
