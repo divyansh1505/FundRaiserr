@@ -1,8 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
 import CampaignList from '../components/CampaignList';
-import Footer from '../components/Footer';
 import '../styles/HomePage.css';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -13,7 +12,9 @@ const HomePage = () => {
           <div className="text-slide">
             <h1>Welcome to FundRaiser</h1>
             <p>Support businesses you believe in</p>
-            <button id="but">Purchase Shares</button>
+            <Link to="/donate">
+            <button id="but">Start Donating</button>
+            </Link>
           </div>
           <div id="pic1">
             {/* Add an image or content you want to animate */}

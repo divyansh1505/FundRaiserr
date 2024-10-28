@@ -9,6 +9,37 @@ body {
     background-color: #f4f4f4;
 }
 
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -32,6 +63,7 @@ body {
     text-align: left;
     margin-bottom: 20px;
     margin-top: 20px;
+    animation: slideInFromLeft 1s ease-out forwards;
 }
 
 .contact-left h2 {
@@ -54,6 +86,7 @@ body {
     gap: 20px;
     margin-top: 60px;
     margin-bottom: 20px;
+    animation: slideInFromRight 1s ease-out forwards;
 }
 
 .container {
@@ -117,12 +150,13 @@ body {
     cursor: pointer;
     padding: 10px 20px;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     width: 100%;
 }
 
 .submit1:hover {
     background-color: hsl(279, 90%, 60%);
+    animation: popUp 0.3s ease-in-out forwards;
 }
 
 .popup {
@@ -161,11 +195,12 @@ body {
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .popup button:hover {
     background-color: hsl(279, 90%, 60%);
+    animation: popUp 0.3s ease-in-out forwards;
 }
 
 .donate {
@@ -179,9 +214,3 @@ body {
     text-align: center;
 }
 
-.underline2 {
-    width: 270px;
-    height: 6px;
-    background-color: white;
-    border-radius: 9px;
-}
