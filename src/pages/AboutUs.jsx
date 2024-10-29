@@ -14,7 +14,7 @@ function AboutUs() {
 
 <div id="wrap"> 
   <div>
-    <h1 id="subtitle">Welcome To Our Website</h1>
+    <h1 id="subtitle">Welcome To FundRaiser</h1>
   </div> 
   <div className="description">
     <h3>

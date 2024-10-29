@@ -31,6 +31,11 @@ body {
     }
 }
 
+#pic{
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: black;
+}
 
 .contact {
     display: flex;
@@ -86,10 +91,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(270deg, #E0B6E4, #D1B3E0);
+    background: linear-gradient(270deg, #e4bce8, #d6b6e7);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.4);
     margin-top: 20px;
     width: 100%;
     max-width: 400px;
@@ -119,6 +124,10 @@ body {
     font-size: 1rem;
     font-weight: 500;
     color: black;
+}
+
+#EYD{
+    color:black;
 }
 
 .inputs input {

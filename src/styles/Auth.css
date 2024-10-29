@@ -101,7 +101,7 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #ff4757; /* Red color */
+    background-color: #ff4757; 
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -109,6 +109,6 @@ body {
   }
   
   .logout-button:hover {
-    background-color: #e84118; /* Darker red on hover */
+    background-color: #e84118; 
   }
   
