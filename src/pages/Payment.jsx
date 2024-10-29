@@ -15,7 +15,7 @@ function Payment() {
         <div className="contact-left">
           <h2 className='h2'>WHY DONATE?</h2>
           <div className='underline2'></div>
-          <img className='crowd' id="pic" src="crowd.png" alt="Crowd" />
+          <img className='crowd' id="pic" src="crowdd.jpg" alt="Crowd" />
           <p className='p2'>
             Donating to a crowdfunding website can be a powerful way to support innovative projects, social causes, and creative endeavors. By contributing, you help bring ideas to life, empower entrepreneurs, and make a tangible difference in the lives of individuals and communities in need.
             <br />

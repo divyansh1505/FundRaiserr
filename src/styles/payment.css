@@ -33,8 +33,10 @@ body {
 
 #pic{
     border-radius: 10px;
-    border-style: dashed;
+    border-style: solid;
     border-color: black;
+    width: 400px;
+    height: auto;
 }
 
 .contact {
