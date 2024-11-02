@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs';
 import Payment from './pages/Payment';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Contact from './pages/Contact';
 import Profile from './components/Profile';
 import { ToastContainer, toast } from "react-toastify";
 import { auth } from './components/firebase';  // Adjust path if necessary
@@ -37,6 +38,7 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/donate" element={<Payment />} />
             <Route path="/profile" element={user ? <Profile /> : <Navigate to="/signin" />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

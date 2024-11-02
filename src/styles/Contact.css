@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+.contact-component-xyz-container {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contact-component-xyz-section {
+    height: 150vh;
+    background-image: linear-gradient(to right, RGB(80, 26, 184), RGB(131, 55, 198));
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.contact-component-xyz-heading {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-size: 50px;
+}
+
+.contact-component-xyz-subheading {
+    font-family: 'Roboto';
+    font-size: 30px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    width: 0px;
+    animation: contact-xyz-typing 3.5s steps(30, end) forwards, contact-xyz-blink-caret 0.75s step-end infinite forwards;
+}
+
+.contact-component-xyz-content-box {
+    position: relative;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #955fff, #a725ee83);
+    width: 75%;
+    margin: auto;
+    top: 5%;
+    height: 75vh;
+    box-shadow: 10px 3px 20px black;
+    padding: 10px;
+}
+
+.contact-component-xyz-paragraph {
+    font-family: 'Lato';
+    padding: 20px;
+    font-size: 20px;
+    width: 0;
+    animation: contact-xyz-typing 3.5s 4s steps(30, end) forwards, contact-xyz-blink-caret 0.75s step-end 5 forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    line-height: 0px;
+}
+
+.contact-component-xyz-divider-top {
+    margin-bottom: 50px;
+}
+
+.contact-component-xyz-divider-bottom {
+    margin-top: 50px;
+}
+
+.contact-component-xyz-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 8px;
+}
+
+.contact-component-xyz-form-input {
+    width: 30%;
+    height: 40px;
+    border-radius: 7px;
+    border: 0.1px solid white;
+}
+
+.contact-component-xyz-button {
+    float: right;
+    height: 40px;
+    width: 10%;
+    border-radius: 20px;
+    border: 0.1px solid white;
+    margin: 20px;
+}
+
+@keyframes contact-xyz-typing {
+    from {
+        width: 0px;
+    }
+    to {
+        width: inherit;
+    }
+}
+
+@keyframes contact-xyz-blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
